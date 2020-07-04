@@ -6,7 +6,10 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint .",
-        "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\""
+        "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
+        "format": "npm run prettier -- --write ",
+        "check-format": "npm run prettier -- --list-diferent",
+        "validate": "npm run format && npm run lint"
     },
     "author": "",
     "license": "ISC",
